@@ -69,7 +69,7 @@ function Home() {
       </Helmet>
       <div className="hold">
         {location.pathname === "/" ? (
-          <div className="Container">
+          <div className="container homecontainer">
             <section className="profileCard">
               <div className="profileImg">
                 <img className="imageBar" src={imageBar} alt="bar" />

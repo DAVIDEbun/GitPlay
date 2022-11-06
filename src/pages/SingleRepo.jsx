@@ -4,10 +4,11 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import { Helmet } from "react-helmet-async";
-import { ReactComponent as forks } from "../icons/fork.svg";
-import { ReactComponent as openIssues } from "../icons/open issues.svg";
-import { ReactComponent as size } from "../icons/size.svg";
-import { ReactComponent as views } from "../icons/views.svg";
+
+import { ReactComponent as Forks } from "../icons/fork.svg";
+import { ReactComponent as Openissues } from "../icons/open issues.svg";
+import { ReactComponent as Size } from "../icons/size.svg";
+import { ReactComponent as Views } from "../icons/views.svg";
 
 function SingleRepo() {
   const { id } = useParams();
@@ -38,50 +39,58 @@ function SingleRepo() {
   console.log(id);
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>SingleRepo | Gitplay </title>
         <meta name="description" content="Each Repo Details" />
         <link rel="canonical" href="/SingleRepo" />
       </Helmet>
-    <div className="Container">
-      <div className="gridContainer">
-        <section>
-          <Link to="/">
-            <button className="singleRepoButton"> Back</button>
-          </Link>
-        </section>
+      <div className="container">
+        <div className="gridContainer">
+          <section>
+            <Link to="/">
+              <button className="singleRepoButton"> Back</button>
+            </Link>
+          </section>
 
-        <section>
-          <div className="singleRepoContent">
-            <h3>{repo.name}</h3>
-            <p>{repo.description}</p>
-          </div>
+          <section>
+            <div className="singleRepoContent">
+              <h3>{repo.name}</h3>
+              <p>{repo.description}</p>
+            </div>
 
-          <div className="singleRepocontent_">
-            <p className="visibility">{repo.visibility}</p>
-            <p>{repo.language}</p>
-          </div>
-        </section>
+            <div className="singleRepocontent_">
+              <p className="visibility">{repo.visibility}</p>
+              <p>{repo.language}</p>
+            </div>
+          </section>
 
-        <section className="singleRepoFlex">
-          <div className="singleRepoButton">
-            <forks />
-            <p>{repo.forks} Forks</p>
-          </div>
-          <p className="singleRepoButton">
-            <size /> File Size: {repo.size}kb
-          </p>
-          <p className="singleRepoButton">watchers : {repo.watchers}</p>
-          <p className="singleRepoButton">open issues : {repo.open_issues}</p>
+          <section className="singleRepoFlex">
+            <div className="singleRepoButton">
+              <Forks />
+              <p>{repo.forks} Forks</p>
+            </div>
 
-          <button className="singleRepoButton">
-            <a target="_blank" rel="noreferrer" href={repo.html_url}>
-              VIEW ON GITHUB
-            </a>
-          </button>
-        </section>
+            <p className="singleRepoButton">
+              <Size /> File Size: {repo.size}kb
+            </p>
+            <p className="singleRepoButton">
+              {" "}
+              <Views />
+              watchers : {repo.watchers}
+            </p>
+            <p className="singleRepoButton">
+              {" "}
+              <Openissues /> open issues : {repo.open_issues}
+            </p>
+
+            <button className="singleRepoButton">
+              <a target="_blank" rel="noreferrer" href={repo.html_url}>
+                VIEW ON GITHUB
+              </a>
+            </button>
+          </section>
+        </div>
       </div>
-    </div>
     </>
   );
 }
