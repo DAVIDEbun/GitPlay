@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+  background-color: #24272e;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-weight: 200;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.RepoBody {
+  
+}
+
+.gridContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  padding-bottom: 40px;
+  margin: 10px;
+  border-radius: 30px 30px 30px 0px;
+  padding: 20px;
+  overflow: hidden;
+  background: linear-gradient(45deg, #4d76ba, #3a53a4);
+}
+
+.profileImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  border-radius: 10px 20px 20px 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.imageBar {
+  height: 150px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  height: 64px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #24272e;
+}
+
+.logo {
+  width: 72px;
+  height: 40px;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+nav a {
+  font-size: 16px;
+}
+
+.avatarImg {
+  width: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  color: #ffffff;
+  background-color: #24272e;
+  padding: 10px;
+  width: 250px;
+  border-radius: 20px 20px 20px 0px;
+}
+
+.userDetails button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin: 5px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #4d76ba, #3a53a4);
+}
+
+.userDetails button img {
+  width: 12px;
+  height: 12px;
+}
+
+.userDetails p {
+  font-size: 15px;
+  padding: 1px;
+}
+
+.cardFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  text-decoration: none;
+  border-radius: 20px 20px 20px 0px;
+  padding: 10px 25px;
+  margin: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #24272e;
+}
+
+.cardFoot p {
+  font-size: 15px;
+}
+
+.gitRepoContainer {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.gitRepo {
+  margin: 10px;
+  border-radius: 30px;
+  padding: 20px;
+  overflow: hidden;
+  text-align: left;
+  background: linear-gradient(45deg, #4d76ba, #3a53a4);
+}
+
+.git_Repo {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  
+}
+
+.visibility {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: solid 1px white;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+
+.gitRepoflex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gitRepo h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.gitRepo p {
+  font-size: 12px;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+
+.gitRepo_ p {
+  gap: 20px;
+}
+
+.repoIcon {
+  height: 15px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.pagination li {
+  display: flex;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #4d76ba, #3a53a4);
+}
+
+.disable-btn {
+  color: #24272e;
+}
+
+.disable-btn:hover {
+  color: #24272e;
+  cursor: not-allowed;
+  transform: scale(1.1);
+}
+
+.singleRepoContainer {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px;
+  border-radius: 30px;
+  padding: 20px;
+  overflow: hidden;
+  color: #ffffff;
+  text-align: left;
+}
+
+.singleRepoButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin: 20px;
+  background: linear-gradient(45deg, #4d76ba, #3a53a4);
+}
+
+.singleRepoContent {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.singleRepocontent_ {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 30px;
+  margin-left: 30px;
+}
+
+.singleRepoContent h3 {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.singleRepoContent p {
+  font-size: 15px;
+  font-weight: 200;
+  padding-right: 10px;
+  color: #ffffff;
+  padding: 10px 20px;
+  max-width: 500px;
+  text-align: justify;
+}
+
+.singleRepocontent_ p {
+  font-size: 15px;
+  font-weight: 200;
+  padding-right: 10px;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.singleRepoFlex {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  gap: 10px;
+}
+
+.loadingSpinnerContainer {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: invert(1);
+}
+
+.errorPage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #ffffff;
+  background-color: #24272e;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 20px 20px 20px 0px;
+}
+
+.errorPage h1 {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.errorPage p {
+  font-size: 25px;
+  font-weight: 200;
+  text-align: left;
+}
