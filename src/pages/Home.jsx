@@ -15,6 +15,7 @@ function Home() {
   const [repos, setRepos] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [repoPerPage] = useState(4);
+  const [search, setSearch] = useState("");
 
   const location = useLocation();
 
@@ -52,6 +53,38 @@ function Home() {
     console.log(data);
   };
 
+  // Handle Searching User
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    if (search === "") return;
+    await handleSearchUser();
+    await handleSearchRepo();
+  };
+
+  const handleSearchUser = async () => {
+    const response = await fetch(`${url}/users/${search}`, {
+      headers: {
+        Authorization: `token ${token}`,
+      },
+    });
+    const data = await response.json();
+    setUser(data);
+    setLoading(false);
+  };
+
+  const handleSearchRepo = async () => {
+    const response = await fetch(`${url}/users/${search}/repos`, {
+      headers: {
+        Authorization: `token ${token}`,
+      },
+    });
+
+    const data = await response.json();
+    setRepos(data);
+    setLoading(false);
+    console.log(data);
+  };
+
   if (loading) return <Spinner />;
 
   // Pagination logic
@@ -67,10 +100,20 @@ function Home() {
         <meta name="description" content="Home page of GitPlay" />
         <link rel="canonical" href="/Home" />
       </Helmet>
+
       <div className="hold">
         {location.pathname === "/" ? (
           <div className="container homecontainer">
             <section className="profileCard">
+              <form className="search" onSubmit={handleSearch}>
+                <input
+                  type="text"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                />
+                <button>Search</button>
+              </form>
+
               <div className="profileImg">
                 <img className="imageBar" src={imageBar} alt="bar" />
                 <img className="avatarImg" src={user.avatar_url} alt="avatar" />

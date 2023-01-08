@@ -55,9 +55,6 @@ p {
   text-align: left;
 }
 
-.RepoBody {
-}
-
 .gridContainer {
   display: flex;
   flex-direction: column;
@@ -73,6 +70,26 @@ p {
   padding: 20px;
   overflow: hidden;
   background: linear-gradient(45deg, #4d76ba, #3a53a4);
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.search input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.search button {
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
 }
 
 .profileImg {
