@@ -105,14 +105,6 @@ function Home() {
         {location.pathname === "/" ? (
           <div className="container homecontainer">
             <section className="profileCard">
-              <form className="search" onSubmit={handleSearch}>
-                <input
-                  type="text"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                />
-                <button>Search</button>
-              </form>
 
               <div className="profileImg">
                 <img className="imageBar" src={imageBar} alt="bar" />
@@ -132,6 +124,7 @@ function Home() {
                 <p>{user.bio}</p>
 
                 <p>{user.location}</p>
+
               </div>
 
               <div className="cardFoot">
@@ -139,6 +132,15 @@ function Home() {
                 <p>{user.followers} Followers</p>
                 <p> {user.following} Following</p>
               </div>
+
+              <form className="search" onSubmit={handleSearch}>
+                <input
+                  type="text"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                />
+                <button>Search</button>
+              </form>
             </section>
 
             <section className="RepoBody">
