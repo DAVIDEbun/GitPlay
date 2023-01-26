@@ -271,7 +271,7 @@ nav a {
   margin: 10px;
 }
 
-.pagination li {
+.pagination p {
   display: flex;
   border: none;
   color: #ffffff;
@@ -390,11 +390,15 @@ nav a {
   font-size: 30px;
   font-weight: 500;
   text-align: left;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 .errorPage p {
   font-size: 25px;
   font-weight: 200;
   text-align: left;
+}
+
+.errorPage button {
+  margin-left: 50px;
 }
