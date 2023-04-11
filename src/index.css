@@ -70,6 +70,7 @@ p {
   padding: 20px;
   overflow: hidden;
   background: linear-gradient(45deg, #4d76ba, #3a53a4);
+  height: 500px;
 }
 
 .search {
